@@ -4,8 +4,6 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-
-
 public class UserRegistration {
 	static String firstName;
 	static Scanner sc=new Scanner(System.in);
@@ -31,8 +29,8 @@ public class UserRegistration {
 				System.out.println("Enter a name that starts with Cap and has min 3 chars");
 			}
 		}
-	}	
-		
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("Welcome to User Registration");
 		setFirstName();
