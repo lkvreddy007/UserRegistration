@@ -8,6 +8,7 @@ public class UserRegistration {
 	static String firstName;
 	static String lastName;
 	static String email;
+	static String phoneNo;
 	static Scanner sc=new Scanner(System.in);
 
 	public static boolean matche(String regex,String input) {
@@ -64,11 +65,28 @@ public class UserRegistration {
 			}
 		}
 	}
+	
+	public static void setPhoneNo() {
+		boolean flag=true;
+		String pattern="[0-9]{2} 9[0-9]{9}";
+		while(flag) {
+			System.out.println("Enter the Phone number:");
+			String input=sc.nextLine();
+			if(matche(pattern,input)) {
+				phoneNo=input;
+				flag=false;
+			} 
+			else {
+				System.out.println("Enter phone number in 91 9XXXXXXXXX format");
+			}
+		}
+	}
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to User Registration");
 		setFirstName();
 		setLastName();
 		setEmailId();
+		setPhoneNo();
 	}
 }
