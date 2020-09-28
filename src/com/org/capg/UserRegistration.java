@@ -6,6 +6,7 @@ import java.util.regex.Matcher;
 
 public class UserRegistration {
 	static String firstName;
+	static String lastName;
 	static Scanner sc=new Scanner(System.in);
 
 	public static boolean matche(String regex,String input) {
@@ -31,8 +32,26 @@ public class UserRegistration {
 		}
 	}
 	
+	public static void setLastName(){
+		boolean flag=true;
+		String pattern="[A-Z][a-z]{2,}";
+		while(flag) {
+			System.out.println("Enter the Last Name:");
+			String input=sc.nextLine();
+			if(matche(pattern,input)) {
+				lastName=input;
+				flag=false;
+			} 
+			else {
+				System.out.println("Enter a name that starts with Cap and has min 3 chars");
+			}
+		}
+	}
+
+	
 	public static void main(String[] args) {
 		System.out.println("Welcome to User Registration");
 		setFirstName();
+		setLastName();
 	}
 }
