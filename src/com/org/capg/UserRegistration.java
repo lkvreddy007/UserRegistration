@@ -72,7 +72,7 @@ public class UserRegistration {
 	
 	public static void setPhoneNo() {
 		boolean flag=true;
-		String pattern="[0-9]{2} 9[0-9]{9}";
+		String pattern="[0-9]{2}[\\S]{1}9[0-9]{9}";
 		while(flag) {
 			System.out.println("Enter the Phone number:");
 			String input=sc.nextLine();
