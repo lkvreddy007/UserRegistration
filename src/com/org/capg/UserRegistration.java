@@ -89,7 +89,7 @@ public class UserRegistration {
 	
 	public static void setPassword() {
 		boolean flag=true;
-		String pattern="(?=.*[A-Z])[a-zA-Z0-9]{8,}";
+		String pattern="(?=.*[A-Z])(?=.*\\\\d)[a-zA-Z0-9]{8,}";
 		while(flag) {
 			System.out.println("Enter the Password:");
 			String input=sc.nextLine();
@@ -99,7 +99,7 @@ public class UserRegistration {
 				System.out.println("Valid Password");
 			} 
 			else {
-				System.out.println("Password should have atleast 8 characters");
+				System.out.println("Password should have atleast 8 characters, atleast one char in caps and one digits");
 			}
 		}
 	}
