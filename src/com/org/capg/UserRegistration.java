@@ -55,7 +55,7 @@ public class UserRegistration {
 	
 	public static void setEmailId() {
 		boolean flag=true;
-		String pattern="^[a-zA-Z0-9]+([.+-_][a-zA-Z]+)?@[a-zA-Z0-9]+\\.[a-zA-Z0-9]{2,4}(\\.[a-z]{2})?$";
+		String pattern="^[a-zA-Z0-9]+([.+-_][a-zA-Z]+)?@[a-zA-Z0-9]+\\.[a-z]{2,4}(\\.[a-z]{2})?$";
 		while(flag) {
 			System.out.println("Enter the Email:");
 			String input=sc.nextLine();
