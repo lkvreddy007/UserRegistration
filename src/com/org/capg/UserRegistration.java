@@ -9,6 +9,7 @@ public class UserRegistration {
 	static String lastName;
 	static String email;
 	static String phoneNo;
+	static String password;
 	static Scanner sc=new Scanner(System.in);
 
 	public static boolean matche(String regex,String input) {
@@ -27,6 +28,7 @@ public class UserRegistration {
 			if(matche(pattern,input)) {
 				firstName=input;
 				flag=false;
+				System.out.println("Valid First Name");
 			} 
 			else {
 				System.out.println("Enter a name that starts with Cap and has min 3 chars");
@@ -43,6 +45,7 @@ public class UserRegistration {
 			if(matche(pattern,input)) {
 				lastName=input;
 				flag=false;
+				System.out.println("Valid Last Name");
 			} 
 			else {
 				System.out.println("Enter a name that starts with Cap and has min 3 chars");
@@ -59,6 +62,7 @@ public class UserRegistration {
 			if(matche(pattern,input)) {
 				email=input;
 				flag=false;
+				System.out.println("Valid Email Id");
 			} 
 			else {
 				System.out.println("Enter mail in abc.xyz@bl.co.in format");
@@ -75,9 +79,27 @@ public class UserRegistration {
 			if(matche(pattern,input)) {
 				phoneNo=input;
 				flag=false;
+				System.out.println("Valid Phone number");
 			} 
 			else {
 				System.out.println("Enter phone number in 91 9XXXXXXXXX format");
+			}
+		}
+	}
+	
+	public static void setPassword() {
+		boolean flag=true;
+		String pattern="[a-zA-Z0-9]{8,}";
+		while(flag) {
+			System.out.println("Enter the Password:");
+			String input=sc.nextLine();
+			if(matche(pattern,input)) {
+				password=input;
+				flag=false;
+				System.out.println("Valid Password");
+			} 
+			else {
+				System.out.println("Password should have atleast 8 characters");
 			}
 		}
 	}
