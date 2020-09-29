@@ -89,7 +89,7 @@ public class UserRegistration {
 	
 	public static void setPassword() {
 		boolean flag=true;
-		String pattern="[a-zA-Z0-9]{8,}";
+		String pattern="(?=.*[A-Z])[a-zA-Z0-9]{8,}";
 		while(flag) {
 			System.out.println("Enter the Password:");
 			String input=sc.nextLine();
